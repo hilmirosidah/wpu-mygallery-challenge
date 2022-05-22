@@ -4,31 +4,261 @@
 }
 
 /* container */
-.profile{
-    width: 156px;
-    height: 156px;
-    top: 60px;
-    left: 641px;
-    border-radius: 16px;
-    color: #c4c4c4;;
+.container{
+    font-family: 'Monrserrat',sans-serif;
+    width: 1440px;
+    height: 1577px;
+    border-radius: 24px;
+    background-color: #fffff;
+    position: relative;
+    margin-top:41px;
+
 }
 
 
-/* header */
-.header{
+.profile{
+    display: grid;
+    row-gap: 18px;
+    justify-items: center;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(217px 29px 17px);
+}
 
+.container img{
+    max-width: 217px;
+    border-radius: 16px;
+}
+
+.profile b{
+    font-weight: 600;
+    font-size: 24px;
+    color: #4e5150;
+    line-height: 29.26px;
+   
+}
+
+.profile p{
+    font-weight: 600;
+    font-size: 14px;
+    color: #a9a9a9;
+    line-height: 17.07px;
+}
+
+/* button */
+.button{
+    display: flex;
+    flex-grow: 100px;
+    justify-content: center;
+    margin-top: 25px;
+}
+
+
+
+.button .button1, .button2, .button3{
+    width: 100px;
+    height: 67px;
+    padding-top: 17px;
+    box-sizing: border-box;
+    margin-right: 25px;
+    border-radius: 12px;
+    background: #e5e5e5;
+    text-align: center;
+
+}
+
+.button h1{
+    font-weight: 600;
+    font-size:18px;
+    color: #4e5150;
+}
+
+.button h2{
+    font-weight: 600;
+    font-size: 14px;
+    color: #BDBDBD;
+    line-height: 17px;
 }
 
 
 /* gallery */
-.gallery .img1{
+.gallery{
+    width: 960px;
+    height: 960px;
     display: grid;
-    width: 350px;
-    height: 578px;
-    top: 272px;
-    left: 219px;
+    grid-template-areas: 
+    'p1 p2 p2'
+    'p3 p3 p4'
+    'p5 p6 p4'
+    ;
+    gap: 25px;
+    margin: 90px auto;
+}
+
+.gallery .img1{
+    grid-area: p1;
     border-radius: 12px;
-    background: url('photo1.png');
+    background-image: url('../img/p1.png');
+    
+}
+
+.gallery .img2{
+    grid-area: p2;
+    border-radius: 12px;
+    background-image: url('../img/p2.png');
+    
+}
+.gallery .img3{
+    grid-area: p3;
+    border-radius: 12px;
+    background-image: url('../img/p3.png');
+    
+}
+.gallery .img4{
+    grid-area: p4;
+    border-radius: 12px;
+    background-image: url('../img/p4.png');
+    
+}
+.gallery .img5{
+    grid-area: p5;
+    border-radius: 12px;
+    background-image: url('../img/p5.png');
+    
+}
+.gallery .img6{
+    grid-area: p6;
+    border-radius: 12px;
+    background-image: url('../img/p6.png');
+    
+}
+
+
+/* footer */
+.footer{
+    display: flex;
+    font-family: 'Monrserrat',sans-serif;
+    width: 350px;
+    height: 17px;
+    top: 1536px;
+    left: 576px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17.07px;
+    align-self: center;
+    color: #B9bdcf;
+    align-items: flex-end;
+    margin: auto;
+    
+}
+.footer a{
+    color: inherit;
+    font-weight: 700;
 
 }
-/* footer */
+
+
+/* responsive */
+@media screen and (max-width:600px){
+    .container{
+        width: 375px;
+        height: 717px;
+        margin-top:17.61px;
+    
+    }
+    
+    
+    .profile{
+        height: 212px;
+        grid-template-rows: repeat(141px 19px 11px);
+        row-gap: 12px;
+    }
+    
+    .container img{
+        max-width: 141px;
+        border-radius: 12px;
+    }
+    
+    .profile b{
+        font-size: 14px;
+        line-height: 17.07px;
+       
+    }
+    
+    .profile p{
+        font-size: 10px;
+        line-height: 12.19px;
+    }
+    
+    /* button */
+    .button{
+        flex-grow: 78px;
+        margin-top: -90px;
+    }
+    
+    
+    
+    .button .button1, .button2, .button3{
+        width: 78px;
+        height: 52px;
+        padding-top: 14px;
+        margin-right: 10px;
+        margin-top: 90px ;
+    
+    }
+    
+    .button h1{
+        font-size:12px;
+    }
+    
+    .button h2{
+        font-size: 12px;
+        line-height: 15px;
+    }
+    
+    
+    /* gallery */
+    .gallery{
+        width: 360px;
+        height: 360px;
+        gap: 5px;
+        margin-left: 7px;
+        margin-right: 7px;
+
+    
+    }
+    
+    .gallery .img1{
+        background-size: 127px;
+        
+    }
+    
+    .gallery .img2{
+        background-size: 254px 127px;
+        
+    }
+    .gallery .img3{
+        background-size: 254px 127px;
+        
+    }
+    .gallery .img4{
+        background-size: 127px 254px ;
+        
+        
+    }
+    .gallery .img5{
+        background-size: 127px;
+        
+    }
+    .gallery .img6{
+        background-size: 127px;
+        
+    }
+    
+    
+    /* footer */
+    .footer a{
+        font-weight: 500;
+    
+    }
+
+}
